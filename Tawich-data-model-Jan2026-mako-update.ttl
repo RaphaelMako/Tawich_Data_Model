@@ -1,0 +1,411 @@
+@prefix :  <http://www.semanticweb.org/GCRC/ontologies/2025/Tawich/> .
+@prefix dwc: <http://rs.tdwg.org/dwc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tawich: <http://www.semanticweb.org/GCRC/ontologies/2025/Tawich#> .
+@base <http://www.semanticweb.org/GCRC/ontologies/2025/Tawich/> .
+
+# --- Classes ---
+
+tawich:HarvestingRights a rdfs:Class ;
+    rdfs:label "Harvesting Rights"@en .
+
+tawich:CulturalPractices a rdfs:Class ;
+    rdfs:label "Cultural Practices"@en .
+
+tawich:EcologicalResources a rdfs:Class ;
+    rdfs:label "Ecological Resources"@en .
+
+tawich:SourcesOfChange a rdfs:Class ;
+    rdfs:label "Sources Of Change"@en .
+
+tawich:ObservedChanges a rdfs:Class ;
+    rdfs:label "Observed Changes"@en .
+
+tawich:OtherQuoteCategories a rdfs:Class ;
+    rdfs:label "Other Quote Categories"@en .
+
+tawich:Site a rdfs:Class ;
+    rdfs:label "Site"@en ;
+    rdfs:comment "Site indicated by a knowledge holder." ;
+    rdfs:subClassOf geo:Feature .
+
+tawich:Location a rdfs:Class ;
+    rdfs:label "Location"@en ;
+    rdfs:comment "Location referenced in the quote or entities named in the interview." .
+
+tawich:Quote a rdfs:Class ;
+    rdfs:label "Quote"@en ;
+    rdfs:comment "Quotes from interviews, associated with Knowledge Holder Name and additional associated entities." .
+
+tawich:Interview a rdfs:Class ;
+	rdfs:label "Interview"@en ;
+	rdfs:comment "Interview of community members." .
+
+tawich:KnowledgeHolder a rdfs:Class ;
+    rdfs:label "Knowledge Holder"@en ;
+    rdfs:comment "Knowledge holder who provided the interview." .
+
+tawich:Community a rdfs:Class ;
+    rdfs:label "Community"@en ;
+    rdfs:comment "Name of the community given by the Tawich study interviewed knowledge holders. Indicated community of residence." .
+
+tawich:Media a rdfs:Class ;
+    rdfs:label "Media"@en ;
+    rdfs:comment "Media associated to a species." .
+
+tawich:Object a rdfs:Class ;
+    rdfs:label "Object"@en ;
+    rdfs:comment "Instance of an geo object, linked to either Sites, or Species." .
+
+
+####################
+# --- SubClasses ---
+####################
+
+
+########## Harvesting Rights ##########
+
+tawich:Harvesting a rdfs:Class ;
+    rdfs:label "Harvesting"@en ;
+    rdfs:comment "Firelight sentiment analysis category; e.g., ability to practice harvesting rights for consumption purposes only" ;
+    rdfs:subClassOf tawich:HarvestingRights .
+
+tawich:MedicinalPlantHarvesting a rdfs:Class ;
+    rdfs:label "Medicinal Plant Harvesting"@en ;
+    rdfs:comment "Firelight sentiment analysis category; e.g., preparation or use of medicinal plant" ;
+    rdfs:subClassOf tawich:HarvestingRights .
+
+tawich:WaterCollectionAndUse a rdfs:Class ;
+    rdfs:label "Water Use"@en ;
+    rdfs:comment "Firelight sentiment analysis category; e.g., collecting drinking water" ;
+    rdfs:subClassOf tawich:HarvestingRights .
+
+tawich:CulturalHarvesting a rdfs:Class ;
+    rdfs:label "Cultural Harvesting"@en ;
+    rdfs:comment "Firelight sentiment analysis category; e.g., firewood, CMTs, other plants used for cultural purposes" ;
+    rdfs:subClassOf tawich:HarvestingRights .
+
+########## Cultural Practices ##########
+
+tawich:CampingAndStayingOnTheLand a rdfs:Class ;
+    rdfs:label "Camping And Staying On The Land"@en ;
+    rdfs:comment "Firelight sentiment analysis category; e.g., campsites, trails, portages, ancestral village sites, etc." ;
+    rdfs:subClassOf tawich:CulturalPractices .
+
+tawich:Governance a rdfs:Class ;
+    rdfs:label "Governance"@en ;
+    rdfs:comment "Firelight sentiment analysis category; e.g., governing structures, laws, stewardship" ;
+    rdfs:subClassOf tawich:CulturalPractices .
+
+tawich:CulturalConnection a rdfs:Class ;
+    rdfs:label "Cultural Connection"@en ;
+    rdfs:comment "Firelight sentiment analysis category; e.g., spiritual connection, sense of place, identity, ceremonial areas, burials sites, etc." ;
+    rdfs:subClassOf tawich:CulturalPractices .
+
+########## Ecological Resources ##########
+
+tawich:Species a rdfs:Class ;
+    rdfs:label "Species"@en ;
+    rdfs:comment "Represents both flora and fauna species indicated by the Tawich study interviewed knowledge holders. Includes wildlife, bird, fish, and plant species." ;
+    rdfs:subClassOf tawich:EcologicalResources .
+
+tawich:WildlifeSpecies a rdfs:Class ;
+    rdfs:label "Wildlife Species"@en ;
+    rdfs:comment "Wildlife species" ;
+    rdfs:subClassOf tawich:Species .
+
+tawich:BirdSpecies a rdfs:Class ;
+    rdfs:label "Bird Species"@en ;
+    rdfs:comment "Bird species" ;
+    rdfs:subClassOf tawich:Species .
+
+tawich:FishSpecies a rdfs:Class ;
+    rdfs:label "Fish Species"@en ;
+    rdfs:comment "Fish species" ;
+    rdfs:subClassOf tawich:Species .
+
+tawich:PlantSpecies a rdfs:Class ;
+    rdfs:label "Plant Species"@en ;
+    rdfs:comment "Plant species" ;
+    rdfs:subClassOf tawich:Species .
+
+tawich:LandFeatures a rdfs:Class ;
+    rdfs:label "Land Features"@en ;
+    rdfs:comment "Land Features" ;
+    rdfs:subClassOf tawich:EcologicalResources .
+
+tawich:WaterFeatures a rdfs:Class ;
+    rdfs:label "Water Features"@en ;
+    rdfs:comment "Water Features" ;
+    rdfs:subClassOf tawich:EcologicalResources .
+
+########## Observed Changes ##########
+
+tawich:ChangesToPlantOrAnimal a rdfs:Class ;
+    rdfs:label "Changes To Plant Or Animal Quality"@en ;
+    rdfs:comment "Changes to Plant or Animal Quality, Quantity, or Distribution; E.g., ability to practice stewardship rights, distribution (i.e., migratory, displacement)" ;
+    rdfs:subClassOf tawich:ObservedChanges .
+
+tawich:ChangesToWater a rdfs:Class ;
+    rdfs:label "Changes To Water"@en ;
+    rdfs:comment "Changes to Water; E.g., changes to waterflow, quantity and quality" ;
+    rdfs:subClassOf tawich:ObservedChanges .
+
+tawich:ChangesToWeatherAndSeasons a rdfs:Class ;
+    rdfs:label "Changes To Weather And Seasons"@en ;
+    rdfs:comment "Changes to Weather and Seasons; E.g., frequency / intensity of disturbances like forest fires, flooding, logging, mining, invasive species, etc." ;
+    rdfs:subClassOf tawich:ObservedChanges .
+
+tawich:GeophysicalChanges a rdfs:Class ;
+    rdfs:label "Geophysical Changes"@en ;
+    rdfs:comment "Geophysical Changes; E.g., changes to the land like new land features, degradation, erosion" ;
+    rdfs:subClassOf tawich:ObservedChanges .
+
+########## Sources of Changes ##########
+
+tawich:ClimateChange a rdfs:Class ;
+    rdfs:label "Climate Change"@en ;
+    rdfs:comment "Climate change; E.g., long-term weather patterns" ;
+    rdfs:subClassOf tawich:SourcesOfChange .
+
+tawich:WaterControl a rdfs:Class ;
+    rdfs:label "Water Control"@en ;
+    rdfs:comment "Water control; E.g., dams and water control structures for hydro power or to maintain flow (e.g., references to flooding, etc.)" ;
+    rdfs:subClassOf tawich:SourcesOfChange .
+
+tawich:InvasiveSpecies a rdfs:Class ;
+    rdfs:label "Invasive Species"@en ;
+    rdfs:comment "Invasive Species; E.g., species not previously observed in the region" ;
+    rdfs:subClassOf tawich:SourcesOfChange .
+
+tawich:ExtractiveIndustries a rdfs:Class ;
+    rdfs:label "Extractive Industries"@en ;
+    rdfs:comment "Extractive Industries; E.g., mining, logging, oil and gas drilling, etc." ;
+    rdfs:subClassOf tawich:SourcesOfChange .
+
+tawich:LinearDevelopment a rdfs:Class ;
+    rdfs:label "Linear Development"@en ;
+    rdfs:comment "Linear Development (Including spraying); E.g., roads/highways, transmission lines, RoWs, pipelines, associated use of pesticides and herbicides, etc." ;
+    rdfs:subClassOf tawich:SourcesOfChange .
+
+tawich:HumanPresence a rdfs:Class ;
+    rdfs:label "Human Presence"@en ;
+    rdfs:comment "Human presence; E.g., cabins, homes, trails, garbage, etc." ;
+    rdfs:subClassOf tawich:SourcesOfChange .
+
+tawich:SocioEconomicChange a rdfs:Class ;
+    rdfs:label "Socio-Economic Change"@en ;
+    rdfs:comment "Socio-economic change; E.g., inflation, increasing costs, community changes, etc." ;
+    rdfs:subClassOf tawich:SourcesOfChange .
+
+tawich:UnknownChange a rdfs:Class ;
+    rdfs:label "Unknown Change"@en ;
+    rdfs:comment "Unknwon change; E.g., only if participant specifies that change is unknown" ;
+    rdfs:subClassOf tawich:SourcesOfChange .
+
+########## Other Analysis Categories ##########
+
+tawich:PriorityProtectionArea a rdfs:Class ;
+    rdfs:label "Priority Protection Area"@en ;
+    rdfs:comment "Priority Protection Area; E.g., currently unprotected areas seen as culturally and/or ecologically important and/or critical to current and future use and MKC rights" ;
+    rdfs:subClassOf tawich:OtherQuoteCategories .
+
+########## Other ##########
+
+tawich:Video a rdfs:Class ;
+    rdfs:label "Video"@en ;
+    rdfs:comment "Video associated to a species." ;
+    rdfs:subClassOf tawich:Media .
+
+tawich:Image a rdfs:Class ;
+    rdfs:label "Image"@en ;
+    rdfs:comment "Image associated to a species." ;
+    rdfs:subClassOf tawich:Media .
+
+#tawich:PoliticalAdvocacy a rdfs:Class ;
+#    rdfs:label "Political Advocacy"@en ;
+#    rdfs:comment "GCRC sentiment analysis category." ;
+#    rdfs:subClassOf tawich:CulturalPractices .
+
+#tawich:Occupancy a rdfs:Class ;
+#    rdfs:label "Occupancy"@en ;
+#    rdfs:comment "Further categorized as Camping and Staying on the Land in the Firelight sentiment analysis." ;
+#    rdfs:subClassOf tawich:CulturalPractices .
+
+######################################
+# --- Classes ---
+######################################
+
+tawich:SpeciesObservation a rdfs:Class ;
+    rdfs:label "Species Observation"@en ;
+    rdfs:comment "Observation of an instance of a species, this will connect to geo-package's geo data." ;
+    rdfs:subClassOf geo:Feature .
+
+
+#tawich:KnowledgeHolderName a rdfs:Class ;
+#    rdfs:label "Knowledge Holder Name"@en ;
+#    rdfs:comment "Name of the knowledge holder who provided the interview." .
+
+tawich:SubRegion a rdfs:Class ;
+    rdfs:label "Sub-Region"@en ;
+    rdfs:comment "Firelight sentiment analysis category." ;
+    rdfs:subClassOf tawich:Location .
+
+tawich:GatheringPlace a rdfs:Class ;
+    rdfs:label "Gathering Place"@en ;
+    rdfs:subClassOf tawich:Site .
+
+tawich:BirthPlace a rdfs:Class ;
+    rdfs:label "Birth Place"@en ;
+    rdfs:subClassOf tawich:Site .
+
+
+
+# --- Annotation Properties ---
+
+#tawich:Image a rdfs:Property ;
+#    rdfs:label "Image"@en .
+
+#tawich:Video a rdfs:Property ;
+#    rdfs:label "Video"@en .
+
+tawich:InterviewTimestamp a rdfs:Property ;
+    rdfs:label "Interview Timestamp"@en ;
+    rdfs:domain tawich:Quote ;
+    rdfs:range rdfs:Literal .
+
+#tawich:Birthsite a rdfs:Property ;
+#    rdfs:label "Birthsite"@en .
+
+
+
+
+# --- Object Properties ---
+
+tawich:indicatedSpecies a rdf:Property ;
+    rdfs:label "Indicated Species"@en ;
+    rdfs:comment "Species that were indicated by the Tawich study interviewed knowledge holders." ;
+    rdfs:domain tawich:KnowledgeHolder ;
+    rdfs:range tawich:Species .
+
+tawich:indicatedLocation a rdf:Property ;
+    rdfs:label "Indicated Location"@en ;
+    rdfs:comment "Locations that were indicated by the Tawich study interviewed knowledge holders." ;
+    rdfs:domain tawich:KnowledgeHolder ;
+    rdfs:range tawich:Location .
+
+tawich:indicatedSite a rdf:Property ;
+    rdfs:label "Indicated Site"@en ;
+    rdfs:comment "Sites that were indicated by the Tawich study interviewed knowledge holders." ;
+    rdfs:domain tawich:KnowledgeHolder ;
+    rdfs:range tawich:Site .
+
+tawich:hasMedia a rdf:Property ;
+    rdfs:label "Has Media"@en ;
+    rdfs:comment "Media linked to a species." ;
+    rdfs:domain tawich:Species ;
+    rdfs:range tawich:Media .
+
+tawich:hasVideo a rdfs:Property ;
+    rdfs:label "Has Video"@en ;
+    rdfs:comment "Video linked to a species." ;
+    rdfs:domain tawich:Species ;
+    rdfs:range tawich:Video ;
+    rdfs:subPropertyOf tawich:hasMedia .
+
+tawich:hasImage a rdfs:Property ;
+    rdfs:label "Has Image"@en ;
+    rdfs:comment "Image linked to a species." ;
+    rdfs:domain tawich:Species ;
+    rdfs:range tawich:Image ;
+    rdfs:subPropertyOf tawich:hasMedia .
+
+#tawich:hasInterviewTimestamp a rdf:Property ;
+#    rdfs:label "has interview timestamp"@en .
+
+tawich:objectID a rdfs:Property ;
+    rdfs:label "Object ID"@en ;
+    rdfs:comment "Object ID to identify the birthplace or the species observations." ;
+    rdfs:domain geo:Feature ;
+    rdfs:range rdfs:Literal .
+
+
+#tawich:hasBirthsite a rdfs:Property ;
+#    rdfs:label "has birthsite"@en ;
+
+tawich:isMemberOf a rdf:Property ;
+    rdfs:label "Is Member Of"@en ;
+    rdfs:comment "Connects a knowledge holder with a community that they belong to." ;
+    rdfs:domain tawich:KnowledgeHolder ;
+    rdfs:range tawich:Community .
+
+geo:hasGeometry a rdf:Property ;
+    skos:note "For Tawich Project: Coordinate Reference System (CRS) is EPSG:3857 - WGS 84 / Pseudo-Mercator." .
+
+tawich:hasQuote a rdfs:Property ;
+    rdfs:label "Has Quote"@en ;
+    rdfs:comment "Connects quotes to interviews where they are stated." ;
+    rdfs:domain tawich:Interview ;
+    rdfs:range tawich:Quote .
+
+tawich:hasLocation a rdfs:Property ;
+    rdfs:label "Has Location"@en ;
+    rdfs:comment "Connects gathering places to location names." ;
+    rdfs:domain tawich:GatheringPlace ;
+    rdfs:range tawich:Location .
+
+
+# --- Individuals ---
+
+tawich:Kashechewan a tawich:Community ;
+    rdfs:label "Kashechewan"@en ;
+    rdfs:comment "Name of First Nations community." .
+ 	
+tawich:FtAlbany a tawich:Community ;
+    rdfs:label "Ft Albany"@en ;
+    rdfs:comment "Name of First Nations community." .
+
+tawich:polarBear a tawich:Species ;
+    rdfs:label "polar bear"@en ;
+    tawich:hasVideo "https://drive.google.com/file/d/1wOFzNdFpx_DLLypZ4GcDMgdFx53TU-eW/view?usp=drive_link" .
+
+tawich:seagull a tawich:Species ;
+    rdfs:label "seagull"@en ;
+    tawich:hasVideo "https://drive.google.com/file/d/19YesZ5OpEFYhF8fH_EbQBpzbiiNjnX9s/view?usp=drive_link" .
+
+tawich:seal a tawich:Species ;
+    rdfs:label "seal"@en ;
+    tawich:hasVideo "https://drive.google.com/file/d/1fCQ9sBO9xA00EEp4yfcxV4gXymfjY1_l/view?usp=drive_link" .
+
+tawich:whitePelican a tawich:Species ;
+    rdfs:label "white pelican"@en .
+
+tawich:spruce a tawich:Species ;
+    rdfs:label "spruce"@en .
+
+tawich:snowGoose a tawich:Species ;
+    rdfs:label "snow goose"@en .
+
+tawich:MichaelSutherland a tawich:KnowledgeHolderName ;
+    rdfs:label "Michael Sutherland"@en ;
+    tawich:isMemberOf tawich:Kashechewan ;
+    tawich:indicatedSpecies tawich:whitePelican ;
+    geo:hasGeometry "-8960493, 6881192" .
+
+tawich:EdMetatawabin a tawich:KnowledgeHolderName ;
+    rdfs:label "Ed Metatawabin"@en ;
+    tawich:isMemberOf tawich:FtAlbany ;
+    tawich:indicatedSpecies tawich:spruce .
+
+# Additional records for the same individuals
+tawich:MichaelSutherland tawich:indicatedSpecies tawich:polarBear ;
+    geo:hasGeometry "-9190733, 6798155" ;
+    tawich:hasVideo "https://drive.google.com/file/d/1fCQ9sBO9xA00EEp4yfcxV4gXymfjY1_l/view?usp=drive_link" .
+
+tawich:EdMetatawabin tawich:indicatedSpecies tawich:snowGoose ;
+    geo:hasGeometry "-8982207, 6544308" .
