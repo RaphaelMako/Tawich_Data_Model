@@ -438,13 +438,13 @@ tawich:spruce a tawich:Species ;
 tawich:snowGoose a tawich:Species ;
     rdfs:label "snow goose"@en .
 
-tawich:MichaelSutherland a tawich:KnowledgeHolderName ;
+tawich:MichaelSutherland a tawich:KnowledgeHolder ;
     rdfs:label "Michael Sutherland"@en ;
     tawich:isMemberOf tawich:Kashechewan ;
     tawich:indicatedSpecies tawich:whitePelican ;
     geo:hasGeometry "-8960493, 6881192" .
 
-tawich:EdMetatawabin a tawich:KnowledgeHolderName ;
+tawich:EdMetatawabin a tawich:KnowledgeHolder;
     rdfs:label "Ed Metatawabin"@en ;
     tawich:isMemberOf tawich:FtAlbany ;
     tawich:indicatedSpecies tawich:spruce .
