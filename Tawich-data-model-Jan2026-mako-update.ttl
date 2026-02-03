@@ -359,6 +359,53 @@ tawich:hasLocation a rdfs:Property ;
     rdfs:domain tawich:GatheringPlace ;
     rdfs:range tawich:Location .
 
+tawich:mentions a rdfs:Property ; 
+    rdfs:label "Mentions"@en ;
+    rdfs:comment "Connects the quote to specific category groups that are mentioned in the quote." ;
+    rdfs:domain tawich:Quote ;
+    rdfs:range rdfs:Resource . 
+
+tawich:mentionsCulturalPractices a rdfs:Property ; 
+    rdfs:label "Mentions Cultural Practices"@en ;
+    rdfs:comment "Connects quotes to cultural practice concepts." ;
+    rdfs:domain tawich:Quote ;
+    rdfs:range tawich:CulturalPractices ;
+    rdfs:subPropertyOf tawich:mentions .
+
+tawich:mentionsHarvestingRights a rdfs:Property ; 
+    rdfs:label "Mentions Harvesting Rights"@en ;
+    rdfs:comment "Connects quotes to harvesting rights concepts." ;
+    rdfs:domain tawich:Quote ;
+    rdfs:range tawich:HarvestingRights ;
+    rdfs:subPropertyOf tawich:mentions .
+
+tawich:mentionsEcologicalResources a rdfs:Property ; 
+    rdfs:label "Mentions Ecological Resources"@en ;
+    rdfs:comment "Connects quotes to ecological resources concepts." ;
+    rdfs:domain tawich:Quote ;
+    rdfs:range tawich:EcologicalResources ;
+    rdfs:subPropertyOf tawich:mentions .
+
+tawich:mentionsObservedChanges a rdfs:Property ; 
+    rdfs:label "Mentions Observed Changes"@en ;
+    rdfs:comment "Connects quotes to observed changes concepts." ;
+    rdfs:domain tawich:Quote ;
+    rdfs:range tawich:ObservedChanges ;
+    rdfs:subPropertyOf tawich:mentions .
+
+tawich:mentionsSourcesOfChange a rdfs:Property ; 
+    rdfs:label "Mentions Sources Of Change"@en ;
+    rdfs:comment "Connects quotes to sources of change concepts." ;
+    rdfs:domain tawich:Quote ;
+    rdfs:range tawich:SourcesOfChange ;
+    rdfs:subPropertyOf tawich:mentions .
+
+tawich:mentionsOtherQuoteCategories a rdfs:Property ; 
+    rdfs:label "Mentions Other Quote Categoies"@en ;
+    rdfs:comment "Connects quotes to other qoute category concepts." ;
+    rdfs:domain tawich:Quote ;
+    rdfs:range tawich:OtherQuoteCategories ;
+    rdfs:subPropertyOf tawich:mentions .    
 
 # --- Individuals ---
 
