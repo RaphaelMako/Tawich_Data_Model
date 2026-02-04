@@ -154,7 +154,7 @@ tawich:GatheringPlace a rdfs:Class ;
 
 tawich:BirthPlace a rdfs:Class ;
     rdfs:label "Birth Place"@en ;
-    rdfs:subClassOf tawich:CulturalPracticesLocations .
+    rdfs:subClassOf tawich:Site .
 
 
 ########## Ecological Resources ########## Main Rivers
@@ -320,6 +320,12 @@ tawich:hasImage a rdfs:Property ;
     rdfs:domain tawich:Species ;
     rdfs:range tawich:Image ;
     rdfs:subPropertyOf tawich:hasMedia .
+
+tawich:hasObservation a rdfs:Property ;
+    rdfs:label "Has Observation"@en ;
+    rdfs:comment "Used to link a species instance to a geo spatial feature." ;
+    rdfs:domain tawich:Species ;
+    rdfs:range tawich:SpeciesObservation .
 
 tawich:objectID a rdfs:Property ;
     rdfs:label "Object ID"@en ;
