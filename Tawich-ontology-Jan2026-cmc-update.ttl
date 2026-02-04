@@ -378,6 +378,13 @@ tawich:mentionsEcologicalResources a rdfs:Property ;
     rdfs:range tawich:EcologicalResources ;
     rdfs:subPropertyOf tawich:mentions .
 
+tawich:mentionsSpecies a rdfs:Property ;
+    rdfs:label "Mentions Species"@en ;
+    rdfs:comment "Connects quotes to specific species mentioned." ;
+    rdfs:domain tawich:Quote ;
+    rdfs:range tawich:Species ;
+    rdfs:subPropertyOf tawich:mentionsEcologicalResources .
+
 tawich:mentionsObservedChanges a rdfs:Property ; 
     rdfs:label "Mentions Observed Changes"@en ;
     rdfs:comment "Connects quotes to observed changes concepts." ;
