@@ -42,7 +42,7 @@ tawich:HarvestingRights a rdfs:Class ;
     rdfs:subClassOf tawich:Tributaries .
 
 tawich:CulturalPracticesLocations a rdfs:Class ;
-    rdfs:label "Cultural Practices and Site Locations"@en ;
+    rdfs:label "Cultural Practices And Site Locations"@en ;
     rdfs:subClassOf tawich:Tributaries .
 
 tawich:EcologicalResources a rdfs:Class ;
@@ -58,7 +58,7 @@ tawich:ObservedChanges a rdfs:Class ;
     rdfs:subClassOf tawich:MainRivers .
 
 tawich:PoliticalGovernance a rdfs:Class ;
-    rdfs:label "Political and Governance"@en ;
+    rdfs:label "Political And Governance"@en ;
     rdfs:subClassOf tawich:Coasts .
 
 tawich:Media a rdfs:Class ;
@@ -391,7 +391,14 @@ tawich:mentionsOtherQuoteCategories a rdfs:Property ;
     rdfs:comment "Connects quotes to other qoute category concepts." ;
     rdfs:domain tawich:Quote ;
     rdfs:range tawich:OtherQuoteCategories ;
-    rdfs:subPropertyOf tawich:mentions .    
+    rdfs:subPropertyOf tawich:mentions .  
+
+tawich:mentionsPoliticalGovernance a rdfs:Property ;
+    rdfs:label "Mentions Political Governance"@en ;
+    rdfs:comment "Connects quotes to political and governance concepts." ;
+    rdfs:domain tawich:Quote ;
+    rdfs:range tawich:PoliticalGovernance ;
+    rdfs:subPropertyOf tawich:mentions .
 
 geo:hasGeometry a rdf:Property ;
     rdfs:isDefinedBy geo: ;
