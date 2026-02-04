@@ -398,7 +398,7 @@ geo:hasGeometry a rdf:Property ;
     rdfs:domain geo:Feature ;
     rdfs:range geo:Geometry ;
     rdfs:Datatype xsd:double ;
-    rdfs:Label "has Geometry" @en ;
+    rdfs:label "has Geometry" @en ;
     skos:definition "A spatial representation for a given Feature." @en ;
     skos:note “Coordinate Reference System (CRS) is EPSG:3857 - WGS 84 / Pseudo-Mercator; unit - meters; type = projected; method = Mercator; accuracy = Based on World Geodetic System 1984 ensemble (EPSG:6326), which has a limited accuracy of at best 2 meters" .
 
