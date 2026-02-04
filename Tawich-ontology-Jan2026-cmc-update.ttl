@@ -135,7 +135,6 @@ tawich:Occupancy a rdfs:Class ;
 tawich:Site a rdfs:Class ;
     rdfs:label "Site"@en ;
     rdfs:comment "Site indicated by a knowledge holder." ;
-    rdfs:subClassOf geo:Feature ;
     rdfs:subClassOf tawich:CulturalPracticesLocations .
 
 tawich:Location a rdfs:Class ;
@@ -154,7 +153,8 @@ tawich:GatheringPlace a rdfs:Class ;
 
 tawich:BirthPlace a rdfs:Class ;
     rdfs:label "Birth Place"@en ;
-    rdfs:subClassOf tawich:Site .
+    rdfs:subClassOf tawich:CulturalPracticesLocations ;
+    rdfs:subClassOf geo:Feature .
 
 
 ########## Ecological Resources ########## Main Rivers
