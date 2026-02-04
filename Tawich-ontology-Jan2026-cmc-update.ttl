@@ -65,9 +65,9 @@ tawich:Media a rdfs:Class ;
     rdfs:label "Media"@en ;
     rdfs:comment "Media associated to a species." .
 
-tawich:Object a rdfs:Class ;
-    rdfs:label "Object"@en ;
-    rdfs:comment "Instance of an geo object, linked to either Sites, or Species." .
+#tawich:Object a rdfs:Class ;
+#    rdfs:label "Object"@en ;
+#    rdfs:comment "Instance of an geo object, linked to either Sites, or Species." .
 
 tawich:SpeciesObservation a rdfs:Class ;
     rdfs:label "Species Observation"@en ;
