@@ -34,7 +34,7 @@ tawich:Coasts a rdfs:Class ;
 
 tawich:InterviewDetails a rdfs:Class ;
     rdfs:label "Interview Details"@en ;
-    rdfs:comment "Further categorized as Admin in the Firelight sentiment analysis." .
+    rdfs:comment "Further categorized as Admin in the Firelight sentiment analysis." ;
     rdfs:subClassOf tawich:Headwaters .
 
 tawich:HarvestingRights a rdfs:Class ;
@@ -58,7 +58,7 @@ tawich:ObservedChanges a rdfs:Class ;
     rdfs:subClassOf tawich:MainRivers .
 
 tawich:PoliticalGovernance a rdfs:Class ;
-    rdfs:label "Political and Governance"@en .
+    rdfs:label "Political and Governance"@en ;
     rdfs:subClassOf tawich:Coasts .
 
 tawich:Media a rdfs:Class ;
@@ -400,7 +400,7 @@ geo:hasGeometry a rdf:Property ;
     rdfs:Datatype xsd:double ;
     rdfs:label "has Geometry" @en ;
     skos:definition "A spatial representation for a given Feature." @en ;
-    skos:note “Coordinate Reference System (CRS) is EPSG:3857 - WGS 84 / Pseudo-Mercator; unit - meters; type = projected; method = Mercator; accuracy = Based on World Geodetic System 1984 ensemble (EPSG:6326), which has a limited accuracy of at best 2 meters" .
+    skos:note "Coordinate Reference System (CRS) is EPSG:3857 - WGS 84 / Pseudo-Mercator; unit - meters; type = projected; method = Mercator; accuracy = Based on World Geodetic System 1984 ensemble (EPSG:6326), which has a limited accuracy of at best 2 meters" .
 
 
 # --- Individuals ---
