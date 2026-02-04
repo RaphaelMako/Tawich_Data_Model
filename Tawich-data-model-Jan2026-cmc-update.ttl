@@ -129,7 +129,7 @@ tawich:CulturalConnection a rdfs:Class ;
 
 tawich:Occupancy a rdfs:Class ;
     rdfs:label "Occupancy"@en ;
-    rdfs:comment "GCRC analysis combined with "Camping and Staying on the Land" category in the Firelight sentiment analysis." ;
+    rdfs:comment "GCRC analysis combined with 'Camping and Staying on the Land' category in the Firelight sentiment analysis." ;
     rdfs:subClassOf tawich:CulturalPracticesLocations .
 
 tawich:Site a rdfs:Class ;
