@@ -84,7 +84,8 @@ tawich:Interview a rdfs:Class ;
 
 tawich:KnowledgeHolder a rdfs:Class ;
     rdfs:label "Knowledge Holder"@en ;
-    rdfs:comment "Knowledge holder who provided the interview." .
+    rdfs:comment "Knowledge holder who provided the interview." ;
+	rdfs:subClassOf tawich:Headwaters .
 
 tawich:Community a rdfs:Class ;
     rdfs:label "Community"@en ;
